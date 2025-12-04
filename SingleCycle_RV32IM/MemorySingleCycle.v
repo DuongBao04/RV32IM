@@ -1,28 +1,5 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/16/2025 07:59:48 PM
-// Design Name: 
-// Module Name: MemorySingleCycle
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 `include "defines.vh"
-/* A memory module that supports 1-cycle reads and writes, with one read-only port
- * and one read+write port.
- */
+
 module MemorySingleCycle #(
   parameter NUM_WORDS = 512
 ) (
@@ -45,7 +22,7 @@ module MemorySingleCycle #(
 
   // preload instructions to mem_array
   initial begin
-    $readmemh("C:/Users/dgbao/Soc_lab/Soc_lab.srcs/sources_1/new/mem_2.hex", mem_array);
+    $readmemh("C:/Users/ADMIN/Downloads/mem_2.hex", mem_array);
   end
 
   localparam AddrMsb = $clog2(NUM_WORDS) + 1;
@@ -75,4 +52,3 @@ module MemorySingleCycle #(
   end
 
 endmodule
-

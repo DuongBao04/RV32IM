@@ -361,7 +361,7 @@ module DatapathSingleCycle (
     end
 
     default: begin
-      illegal_inst = 1'b1;
+      illegal_inst <= 1'b1;
     end
   endcase
 end
